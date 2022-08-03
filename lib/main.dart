@@ -9,6 +9,9 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
+  final descriptionDummy =
+      'Eiusmod proident ea ea minim velit. Cupidatat laborum excepteur consequat enim est incididunt ex irure. Anim reprehenderit dolore incididunt ut incididunt in ullamco. Dolor fugiat est ullamco deserunt ad et amet culpa nisi anim.\n \nNisi id consequat nulla duis cillum cupidatat nisi velit cillum consectetur pariatur dolore. Tempor ex consequat cupidatat duis cupidatata.';
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -34,7 +37,10 @@ class MyApp extends StatelessWidget {
               centerTitle: true,
               title: const Text('Hola Mundo'),
             ),
-            body: const DescriptionPlace()));
+            body: DescriptionPlace(
+              namePlace: "Cancún",
+              descriptionPlace: descriptionDummy,
+            )));
   }
 
   // Widget imagen() {

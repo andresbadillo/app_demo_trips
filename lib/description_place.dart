@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
 
 class DescriptionPlace extends StatelessWidget {
-  const DescriptionPlace({Key? key}) : super(key: key);
+  const DescriptionPlace(
+      {Key? key, this.namePlace, this.stars, this.descriptionPlace})
+      : super(key: key);
+
+  final namePlace;
+  final stars;
+  final descriptionPlace;
 
   @override
   Widget build(BuildContext context) {
@@ -18,13 +24,24 @@ class DescriptionPlace extends StatelessWidget {
       ),
     );
 
-    final starMiddle = Container(
+    final starHalf = Container(
       margin: const EdgeInsets.only(
         top: 323.0,
         right: 3.0,
       ),
       child: const Icon(
         Icons.star_half,
+        color: Color(0xFFf2C611),
+      ),
+    );
+
+    final starBorder = Container(
+      margin: const EdgeInsets.only(
+        top: 323.0,
+        right: 3.0,
+      ),
+      child: const Icon(
+        Icons.star_border,
         color: Color(0xFFf2C611),
       ),
     );
@@ -37,9 +54,9 @@ class DescriptionPlace extends StatelessWidget {
             left: 20.0,
             right: 20.0,
           ),
-          child: const Text(
-            'Duwili Ella',
-            style: TextStyle(
+          child: Text(
+            namePlace,
+            style: const TextStyle(
               fontSize: 30.0,
               fontWeight: FontWeight.w900,
             ),
@@ -47,30 +64,31 @@ class DescriptionPlace extends StatelessWidget {
           ),
         ),
         Row(
-          children: [star, star, star, star, starMiddle],
+          children: [star, star, star, star, starBorder],
         )
       ],
     );
 
-    const description = Text(
-      'Eiusmod proident ea ea minim velit. Cupidatat laborum excepteur consequat enim est incididunt ex irure. Anim reprehenderit dolore incididunt ut incididunt in ullamco. Dolor fugiat est ullamco deserunt ad et amet culpa nisi anim reprehenderit anim aliquip adipisicing.\n \nNisi id consequat nulla duis cillum cupidatat nisi velit cillum consectetur pariatur dolore. Tempor ex consequat cupidatat duis cupidatat exercitation enim.',
-      style: TextStyle(
-        fontSize: 14.0,
+    final description = Container(
+      margin: const EdgeInsets.only(
+        top: 20.0,
+        right: 20.0,
+        left: 20.0,
       ),
-      textAlign: TextAlign.left,
+      child: Text(
+        descriptionPlace,
+        style: const TextStyle(
+            fontSize: 16.0,
+            fontWeight: FontWeight.normal,
+            color: Color(0xFF56575a)),
+        textAlign: TextAlign.left,
+      ),
     );
 
     final descriptionContainer = Column(
       children: [
         titleStar,
-        Container(
-          margin: const EdgeInsets.only(
-            top: 20.0,
-            left: 20.0,
-            right: 20.0,
-          ),
-          child: description,
-        ),
+        description,
       ],
     );
 
