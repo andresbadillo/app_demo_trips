@@ -57,6 +57,7 @@ class DescriptionPlace extends StatelessWidget {
           child: Text(
             namePlace,
             style: const TextStyle(
+              fontFamily: "Red-Hat",
               fontSize: 30.0,
               fontWeight: FontWeight.w900,
             ),
@@ -78,8 +79,10 @@ class DescriptionPlace extends StatelessWidget {
       child: Text(
         descriptionPlace,
         style: const TextStyle(
+            fontFamily: "Red-Hat",
             fontSize: 16.0,
             fontWeight: FontWeight.normal,
+            fontStyle: FontStyle.normal,
             color: Color(0xFF56575a)),
         textAlign: TextAlign.left,
       ),
