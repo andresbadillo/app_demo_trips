@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:demo_trips_app/description_place.dart';
+import 'description_place.dart';
+import 'review_list.dart';
+import 'gradient_back.dart';
+import 'header_appbar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,16 +34,27 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.lightBlue,
         ),
         home: Scaffold(
-            appBar: AppBar(
-              systemOverlayStyle: const SystemUiOverlayStyle(
-                  statusBarColor: Colors.transparent),
-              centerTitle: true,
-              title: const Text('Hola Mundo'),
-            ),
-            body: DescriptionPlace(
-              namePlace: "Cancún",
-              descriptionPlace: descriptionDummy,
-            )));
+          // appBar: AppBar(
+          //   systemOverlayStyle:
+          //       const SystemUiOverlayStyle(statusBarColor: Colors.transparent),
+          //   centerTitle: true,
+          //   title: const Text('Hola Mundo'),
+          // ),
+          body: Stack(
+            children: [
+              ListView(
+                children: [
+                  DescriptionPlace(
+                    namePlace: "Cancún",
+                    descriptionPlace: descriptionDummy,
+                  ),
+                  ReviewList(),
+                ],
+              ),
+              HeaderAppBar(),
+            ],
+          ),
+        ));
   }
 
   // Widget imagen() {
