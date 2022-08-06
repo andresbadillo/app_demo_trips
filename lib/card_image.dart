@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'fab_green.dart';
 
 class CardImage extends StatelessWidget {
   const CardImage({Key? key, this.pathImage}) : super(key: key);
@@ -32,6 +33,12 @@ class CardImage extends StatelessWidget {
           ]),
     );
 
-    return card;
+    return Stack(
+      alignment: Alignment(0.9, 1.15),
+      children: [
+        card,
+        FloatingActionButtonGreen(),
+      ],
+    );
   }
 }

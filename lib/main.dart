@@ -1,9 +1,6 @@
+import 'package:demo_trips_app/demo_trips_cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'description_place.dart';
-import 'review_list.dart';
-import 'gradient_back.dart';
-import 'header_appbar.dart';
+import 'demo_trips.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,9 +9,6 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  final descriptionDummy =
-      'Eiusmod proident ea ea minim velit. Cupidatat laborum excepteur consequat enim est incididunt ex irure. Anim reprehenderit dolore incididunt ut incididunt in ullamco. Dolor fugiat est ullamco deserunt ad et amet culpa nisi anim.\n \nNisi id consequat nulla duis cillum cupidatat nisi velit cillum consectetur pariatur dolore. Tempor ex consequat cupidatat duis cupidatata.';
-
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -22,39 +16,9 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Demo Trips App',
         theme: ThemeData(
-          // This is the theme of your application.
-          //
-          // Try running your application with "flutter run". You'll see the
-          // application has a blue toolbar. Then, without quitting the app, try
-          // changing the primarySwatch below to Colors.green and then invoke
-          // "hot reload" (press "r" in the console where you ran "flutter run",
-          // or simply save your changes to "hot reload" in a Flutter IDE).
-          // Notice that the counter didn't reset back to zero; the application
-          // is not restarted.
           primarySwatch: Colors.lightBlue,
         ),
-        home: Scaffold(
-          // appBar: AppBar(
-          //   systemOverlayStyle:
-          //       const SystemUiOverlayStyle(statusBarColor: Colors.transparent),
-          //   centerTitle: true,
-          //   title: const Text('Hola Mundo'),
-          // ),
-          body: Stack(
-            children: [
-              ListView(
-                children: [
-                  DescriptionPlace(
-                    namePlace: "Cancún",
-                    descriptionPlace: descriptionDummy,
-                  ),
-                  ReviewList(),
-                ],
-              ),
-              HeaderAppBar(),
-            ],
-          ),
-        ));
+        home: const DemoTripsCupertino());
   }
 
   // Widget imagen() {

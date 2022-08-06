@@ -14,17 +14,17 @@ class Review extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
 
-    final userComment = Container(
+    final userName = Container(
       margin: const EdgeInsets.only(
         left: 20.0,
+        top: 10.0,
       ),
       child: Text(
-        comment,
+        name,
         textAlign: TextAlign.left,
         style: const TextStyle(
-          fontSize: 13.0,
+          fontSize: 17.0,
           fontFamily: "Red-Hat",
-          fontWeight: FontWeight.bold,
         ),
       ),
     );
@@ -44,21 +44,24 @@ class Review extends StatelessWidget {
       ),
     );
 
-    final userName = Container(
+    final userComment = Container(
       margin: const EdgeInsets.only(
         left: 20.0,
       ),
       child: Text(
-        name,
+        comment,
         textAlign: TextAlign.left,
+        overflow: TextOverflow.ellipsis,
         style: const TextStyle(
-          fontSize: 17.0,
+          fontSize: 13.0,
           fontFamily: "Red-Hat",
+          fontWeight: FontWeight.bold,
         ),
       ),
     );
 
     final userDetails = Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         userName,
