@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'gradient_back_profile.dart';
-import 'profile_details.dart';
+import '../widgets/gradient_back_profile.dart';
+import '../widgets/profile_details.dart';
 
 class HeaderProfile extends StatelessWidget {
   @override

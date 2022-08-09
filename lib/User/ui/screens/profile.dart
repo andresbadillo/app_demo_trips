@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'card_image_profile_list.dart';
+import '../widgets/card_image_profile_list.dart';
 import 'header_profile.dart';
 
 class Profile extends StatelessWidget {

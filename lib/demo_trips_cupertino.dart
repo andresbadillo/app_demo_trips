@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'home.dart';
-import 'search.dart';
-import 'profile.dart';
+import 'Place/ui/screens/home.dart';
+import 'Place/ui/screens/search.dart';
+import 'User/ui/screens/profile.dart';
 
 class DemoTripsCupertino extends StatelessWidget {
   const DemoTripsCupertino({Key? key}) : super(key: key);

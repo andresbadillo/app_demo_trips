@@ -1,4 +1,4 @@
-import 'package:demo_trips_app/review.dart';
+import 'package:demo_trips_app/Place/ui/widgets/review.dart';
 import 'package:flutter/material.dart';
 import 'review.dart';
 

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'fab_green.dart';
+import '../../../widgets/fab_green.dart';
 
 class CardImage extends StatelessWidget {
   const CardImage({Key? key, this.pathImage}) : super(key: key);
