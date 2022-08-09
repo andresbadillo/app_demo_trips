@@ -14,7 +14,7 @@ class DemoTripsCupertino extends StatelessWidget {
       bottomNavigationBar: CupertinoTabScaffold(
         tabBar: CupertinoTabBar(
           activeColor: Colors.indigo,
-          backgroundColor: Colors.transparent,
+          backgroundColor: Colors.white.withAlpha(50),
           items: const [
             BottomNavigationBarItem(
                 icon: Icon(

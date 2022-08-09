@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'card_image_profile_list.dart';
+import 'header_profile.dart';
 
 class Profile extends StatelessWidget {
   const Profile({Key? key}) : super(key: key);
@@ -6,8 +8,8 @@ class Profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return Container(
-      color: Colors.indigo,
+    return Stack(
+      children: [HeaderProfile(), CardImageProfileList()],
     );
   }
 }
