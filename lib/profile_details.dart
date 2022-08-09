@@ -18,7 +18,7 @@ class ProfileDetails extends StatelessWidget {
         textAlign: TextAlign.left,
         style: const TextStyle(
             color: Colors.white,
-            fontFamily: "Lato",
+            fontFamily: "Red-Hat",
             fontWeight: FontWeight.bold,
             fontSize: 17.0),
       ),
@@ -30,7 +30,7 @@ class ProfileDetails extends StatelessWidget {
         userMail,
         textAlign: TextAlign.left,
         style: const TextStyle(
-            color: Colors.white38, fontFamily: "Lato", fontSize: 13.0),
+            color: Colors.white38, fontFamily: "Red-Hat", fontSize: 13.0),
       ),
     );
 

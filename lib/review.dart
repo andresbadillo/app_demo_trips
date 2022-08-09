@@ -14,6 +14,30 @@ class Review extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
 
+    final star_half = Container(
+      margin: const EdgeInsets.only(right: 3.0),
+      child: const Icon(
+        Icons.star_half,
+        color: Color(0xFFf2C611),
+      ),
+    );
+
+    final star_border = Container(
+      margin: const EdgeInsets.only(right: 3.0),
+      child: const Icon(
+        Icons.star_border,
+        color: Color(0xFFf2C611),
+      ),
+    );
+
+    final star = Container(
+      margin: const EdgeInsets.only(right: 3.0),
+      child: const Icon(
+        Icons.star,
+        color: Color(0xFFf2C611),
+      ),
+    );
+
     final userName = Container(
       margin: const EdgeInsets.only(
         left: 20.0,
@@ -27,6 +51,10 @@ class Review extends StatelessWidget {
           fontFamily: "Red-Hat",
         ),
       ),
+    );
+
+    final userStars = Row(
+      children: <Widget>[star, star, star, star, star_half],
     );
 
     final userInfo = Container(
@@ -61,12 +89,13 @@ class Review extends StatelessWidget {
     );
 
     final userDetails = Column(
-      mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
+      children: <Widget>[
         userName,
-        userInfo,
-        userComment,
+        Row(
+          children: <Widget>[userInfo, userStars],
+        ),
+        userComment
       ],
     );
 

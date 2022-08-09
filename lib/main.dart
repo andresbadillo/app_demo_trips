@@ -1,6 +1,5 @@
 import 'package:demo_trips_app/demo_trips_cupertino.dart';
 import 'package:flutter/material.dart';
-import 'demo_trips.dart';
 
 void main() {
   runApp(const MyApp());

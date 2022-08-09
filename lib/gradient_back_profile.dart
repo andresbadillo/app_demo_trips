@@ -22,7 +22,7 @@ class GradientBackProfile extends StatelessWidget {
         style: const TextStyle(
             color: Colors.white,
             fontSize: 30.0,
-            fontFamily: "Lato",
+            fontFamily: "Red-Hat",
             fontWeight: FontWeight.bold),
       ),
     );

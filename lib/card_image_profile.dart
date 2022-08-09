@@ -38,21 +38,21 @@ class CardImageProfile extends StatelessWidget {
     final namePlace = Text(
       nameText,
       style: const TextStyle(
-          fontFamily: "Lato", fontSize: 15.0, fontWeight: FontWeight.w900),
+          fontFamily: "Red-Hat", fontSize: 15.0, fontWeight: FontWeight.bold),
       textAlign: TextAlign.left,
     );
 
     final descriptionPlace = Text(
       descriptionText,
       style: const TextStyle(
-          fontFamily: "Lato", fontSize: 9.0, color: Colors.grey),
+          fontFamily: "Red-Hat", fontSize: 10.0, color: Colors.grey),
       textAlign: TextAlign.left,
     );
 
     final steps = Text(
       stepsText,
       style: const TextStyle(
-          fontFamily: "Lato",
+          fontFamily: "Red-Hat",
           fontSize: 13.0,
           fontWeight: FontWeight.bold,
           color: Colors.orange),
