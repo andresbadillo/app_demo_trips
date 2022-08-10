@@ -13,7 +13,7 @@ class Profile extends StatelessWidget {
       children: [
         const GradientBackProfile(),
         ListView(
-          children: const [HeaderProfile(), CardImageProfileList()],
+          children: [const HeaderProfile(), CardImageProfileList()],
         ),
       ],
     );

@@ -1,18 +1,24 @@
 import 'package:flutter/material.dart';
 import '../../../widgets/fab_green.dart';
+import '../../../Place/model/place.dart';
 
 class CardImageProfile extends StatelessWidget {
-  final pathImage; // = "assets/images/paisaje5.png";
-  final nameText; // = "Knuckles Mountain Range";
-  final descriptionText; // = "Hiking, Water fall hunting, Natural bath, \n Scenary & Photography";
-  final stepsText; // = "steps 123.123.123"
+  final pathImage;
+  // final nameText;
+  // final descriptionText;
+  // final typeText;
+  // final stepsText;
+
+  final Place place;
 
   const CardImageProfile(
       {Key? key,
       this.pathImage,
-      this.nameText,
-      this.descriptionText,
-      this.stepsText})
+      // this.nameText,
+      // this.descriptionText,
+      // this.stepsText,
+      // this.typeText,
+      required this.place})
       : super(key: key);
 
   @override
@@ -37,21 +43,28 @@ class CardImageProfile extends StatelessWidget {
     );
 
     final namePlace = Text(
-      nameText,
+      place.name,
       style: const TextStyle(
           fontFamily: "Red-Hat", fontSize: 15.0, fontWeight: FontWeight.bold),
       textAlign: TextAlign.left,
     );
 
     final descriptionPlace = Text(
-      descriptionText,
+      place.where,
+      style: const TextStyle(
+          fontFamily: "Red-Hat", fontSize: 10.0, color: Colors.grey),
+      textAlign: TextAlign.left,
+    );
+
+    final typePlace = Text(
+      place.type,
       style: const TextStyle(
           fontFamily: "Red-Hat", fontSize: 10.0, color: Colors.grey),
       textAlign: TextAlign.left,
     );
 
     final steps = Text(
-      stepsText,
+      'Steps ${place.steps}',
       style: const TextStyle(
           fontFamily: "Red-Hat",
           fontSize: 13.0,
@@ -77,12 +90,16 @@ class CardImageProfile extends StatelessWidget {
                   offset: Offset(0.0, 7.0))
             ]),
         child: Container(
-          margin: const EdgeInsets.only(left: 15.0, top: 12),
+          margin: const EdgeInsets.only(left: 15.0, top: 10.0),
           child: (Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Expanded(child: namePlace),
-              Expanded(child: descriptionPlace),
+              Expanded(
+                  child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [descriptionPlace, typePlace],
+              )),
               Expanded(child: steps)
             ],
           )),
