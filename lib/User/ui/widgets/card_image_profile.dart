@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../widgets/fab_green.dart';
 
 class CardImageProfile extends StatelessWidget {
   final pathImage; // = "assets/images/paisaje5.png";
@@ -87,19 +88,22 @@ class CardImageProfile extends StatelessWidget {
           )),
         ));
 
-    final favoriteButton = Container(
-        width: 30.0,
-        height: 30.0,
-        margin: const EdgeInsets.only(top: 240, bottom: 20),
-        decoration: const ShapeDecoration(
-            shape: CircleBorder(), color: Color(0xFF11DA53)),
-        child: const Center(
-          child: Icon(Icons.favorite, size: 18.0, color: Colors.white),
-        ));
+    // final favoriteButton = Container(
+    //     width: 30.0,
+    //     height: 30.0,
+    //     margin: const EdgeInsets.only(top: 240, bottom: 20),
+    //     decoration: const ShapeDecoration(
+    //         shape: CircleBorder(), color: Color(0xFF11DA53)),
+    //     child: const Center(
+    //       child: Icon(Icons.favorite, size: 18.0, color: Colors.white),
+    //     ));
 
     return Column(
       children: [
         Container(
+          margin: const EdgeInsets.only(
+            top: 10.0,
+          ),
           child: (Stack(
             //alignment: Alignment.topCenter,
             children: [
@@ -109,7 +113,9 @@ class CardImageProfile extends StatelessWidget {
                 child: infoCard,
               ),
               Container(
-                  alignment: const Alignment(0.5, 0), child: favoriteButton)
+                  margin: const EdgeInsets.only(top: 235.0),
+                  alignment: const Alignment(0.5, 0),
+                  child: const FloatingActionButtonGreen())
             ],
           )),
         ),

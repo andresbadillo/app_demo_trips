@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
 class GradientBackProfile extends StatelessWidget {
-  final title = "Profile";
-
   const GradientBackProfile({Key? key}) : super(key: key);
 
   @override
@@ -17,14 +15,6 @@ class GradientBackProfile extends StatelessWidget {
               stops: [0.0, 0.6],
               tileMode: TileMode.clamp)),
       alignment: const Alignment(-0.9, -0.7),
-      child: Text(
-        title,
-        style: const TextStyle(
-            color: Colors.white,
-            fontSize: 30.0,
-            fontFamily: "Red-Hat",
-            fontWeight: FontWeight.bold),
-      ),
     );
 
     final inferior = Container();

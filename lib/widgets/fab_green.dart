@@ -14,7 +14,7 @@ class _FloatingActionButtonGreen extends State<FloatingActionButtonGreen> {
   bool _pressed = false;
 
   void onPressedFav() {
-    Scaffold.of(context).showSnackBar(SnackBar(
+    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
         content: _pressed
             ? const Text("Quitado de favoritos")
             : const Text("Agregado de favoritos")));
