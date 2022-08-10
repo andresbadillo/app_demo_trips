@@ -8,7 +8,7 @@ class CardImageList extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
 
-    return Container(
+    return SizedBox(
       height: 350.0,
       child: ListView(
         padding: const EdgeInsets.all(25.0),

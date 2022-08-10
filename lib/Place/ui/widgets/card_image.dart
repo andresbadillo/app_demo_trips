@@ -34,10 +34,10 @@ class CardImage extends StatelessWidget {
     );
 
     return Stack(
-      alignment: Alignment(0.9, 1.15),
+      alignment: const Alignment(0.9, 1.15),
       children: [
         card,
-        FloatingActionButtonGreen(),
+        const FloatingActionButtonGreen(),
       ],
     );
   }

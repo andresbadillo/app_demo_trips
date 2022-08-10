@@ -12,9 +12,12 @@ class Profile extends StatelessWidget {
     return Stack(
       children: [
         const GradientBackProfile(),
-        ListView(
-          children: [const HeaderProfile(), CardImageProfileList()],
-        ),
+        Container(
+          margin: EdgeInsets.only(top: 30.0),
+          child: (ListView(
+            children: [const HeaderProfile(), CardImageProfileList()],
+          )),
+        )
       ],
     );
   }

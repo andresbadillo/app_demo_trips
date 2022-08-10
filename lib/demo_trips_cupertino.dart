@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/services.dart';
 import 'Place/ui/screens/home.dart';
 import 'Place/ui/screens/search.dart';
 import 'User/ui/screens/profile.dart';
@@ -9,6 +10,8 @@ class DemoTripsCupertino extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(
+        const SystemUiOverlayStyle(statusBarColor: Colors.transparent));
     // TODO: implement build
     return Scaffold(
       bottomNavigationBar: CupertinoTabScaffold(

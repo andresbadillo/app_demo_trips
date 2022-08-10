@@ -13,7 +13,7 @@ class HeaderProfile extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
-          margin: const EdgeInsets.only(top: 40.0, left: 20.0),
+          margin: const EdgeInsets.only(top: 10.0, left: 20.0),
           child: Text(
             title,
             textAlign: TextAlign.left,
