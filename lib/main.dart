@@ -1,9 +1,28 @@
 import 'package:demo_trips_app/demo_trips_cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:generic_bloc_provider/generic_bloc_provider.dart';
+import 'Place/bloc/bloc_place.dart';
+import 'User/bloc/bloc_user.dart';
+
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 void main() {
+  Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
   runApp(const MyApp());
 }
+
+// Future<void> main() async {
+//   await Firebase.initializeApp(
+//     options: DefaultFirebaseOptions.currentPlatform,
+//   );
+
+//   runApp(const MyApp());
+// }
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -11,36 +30,13 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'Demo Trips App',
-        theme: ThemeData(
-          primarySwatch: Colors.lightBlue,
-        ),
-        home: const DemoTripsCupertino());
+    return BlocProvider(
+        child: MaterialApp(
+            debugShowCheckedModeBanner: false,
+            title: 'Demo Trips App',
+            home: DemoTripsCupertino()),
+        bloc: UserBloc());
   }
-
-  // Widget imagen() {
-  //   return const Image(
-  //     image: AssetImage('assets/images/batman.jpg'),
-  //     height: double.infinity,
-  //     width: double.infinity,
-  //     fit: BoxFit.cover,
-  //   );
-  // }
-
-  // Widget texto() {
-  //   return Center(
-  //     child: Container(
-  //       height: 100,
-  //       color: const Color.fromRGBO(0, 0, 0, 0.5),
-  //       child: const Center(
-  //         child: Text("I'm Batman",
-  //             style: TextStyle(fontSize: 40, color: Colors.white)),
-  //       ),
-  //     ),
-  //   );
-  // }
 }
 
 /*

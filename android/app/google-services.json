@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "422854269370",
+    "project_id": "demotripsapp",
+    "storage_bucket": "demotripsapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:422854269370:android:7d0bb3ee93004c7f626583",
+        "android_client_info": {
+          "package_name": "com.example.demo_trips_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "422854269370-kuhku67rq00g9gns9qr06p8hlcsbtgre.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiwASXFLfldw2XdWm_ujHdTzrz5_dwooQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "422854269370-kuhku67rq00g9gns9qr06p8hlcsbtgre.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "422854269370-avv1icpskectt3fo4qphm0ds35mb9snm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.demoTripsApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
