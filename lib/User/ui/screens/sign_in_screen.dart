@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../widgets/gradient_back.dart';
+import '../../../widgets/button_green.dart';
 
 class SignInScreen extends StatefulWidget {
   const SignInScreen({Key? key}) : super(key: key);
@@ -32,7 +33,12 @@ class _SignInScreen extends State<SignInScreen> {
                 fontSize: 32.0,
                 color: Colors.white,
                 fontWeight: FontWeight.bold),
-          )
+          ),
+          ButtonGreen(
+              width: 250.0,
+              height: 50.0,
+              text: "Login with Gmail",
+              onPressed: () {})
         ],
       )
     ]));
