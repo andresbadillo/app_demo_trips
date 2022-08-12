@@ -31,11 +31,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
+        bloc: UserBloc(),
         child: MaterialApp(
             debugShowCheckedModeBanner: false,
             title: 'Demo Trips App',
-            home: DemoTripsCupertino()),
-        bloc: UserBloc());
+            home: DemoTripsCupertino()));
   }
 }
 

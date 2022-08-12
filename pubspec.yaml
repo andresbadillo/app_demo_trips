@@ -36,7 +36,9 @@ dependencies:
   generic_bloc_provider: ^2.1.1
   firebase_core: ^1.20.0
   firebase_auth: ^3.6.2
+  google_sign_in: ^5.2.3
   cloud_firestore: ^3.4.3
+  firebase_storage: ^10.3.4
 
 dev_dependencies:
   flutter_test:
