@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import '../../../widgets/gradient_back.dart';
 import '../../../widgets/button_green.dart';
 
@@ -15,6 +16,8 @@ class SignInScreen extends StatefulWidget {
 class _SignInScreen extends State<SignInScreen> {
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(
+        const SystemUiOverlayStyle(statusBarColor: Colors.transparent));
     // TODO: implement build
     return signInGoogleUI();
   }
