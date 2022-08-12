@@ -1,4 +1,5 @@
 import 'package:demo_trips_app/demo_trips_cupertino.dart';
+import 'User/ui/screens/sign_in_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
 import 'Place/bloc/bloc_place.dart';
@@ -35,7 +36,9 @@ class MyApp extends StatelessWidget {
         child: MaterialApp(
             debugShowCheckedModeBanner: false,
             title: 'Demo Trips App',
-            home: DemoTripsCupertino()));
+            home: SignInScreen())
+        //home: DemoTripsCupertino())
+        );
   }
 }
 
